@@ -10,17 +10,19 @@ const Card = () => {
   }
 
   return (
+
     <div className='card-container'>
+
       {character.map(character => (
 
         <div className='cards' key={character.id}>
-          <h2>{character.name}</h2>
+          <h2 className='name-character'>{character.name}</h2>
           <img className='image-character' src={character.image} alt="imagen" />
           <div className='features'>
-            <p>{character.gender}</p>
-            <p>{character.species}</p>
-            <p>{character.status}</p>
-            <p>{origin.name}</p>
+            <p>Gender: {character.gender}</p>
+            <p>Species: {character.species}</p>
+            <p>Status: {character.status}</p>
+            <p>Origin: {character.origin.name}</p>
           </div>
         </div>
       ))}
