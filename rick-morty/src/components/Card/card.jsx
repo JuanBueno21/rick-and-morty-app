@@ -1,19 +1,12 @@
-import React, { useContext } from 'react';
 import "./card.css"
-import { MyContext } from "../../context/context";
+import React from 'react';
 
-const Card = () => {
-  const { character } = useContext(MyContext);
-
-  if (character.length === 0) {
-    return <p>Loading...</p>;
-  }
+const Card = ({ characters }) => {
 
   return (
 
     <div className='card-container'>
-
-      {character.map(character => (
+      {characters.map(character => (
 
         <div className='cards' key={character.id}>
           <h2 className='name-character'>{character.name}</h2>
@@ -25,6 +18,7 @@ const Card = () => {
             <p>Origin: {character.origin.name}</p>
           </div>
         </div>
+
       ))}
 
     </div>

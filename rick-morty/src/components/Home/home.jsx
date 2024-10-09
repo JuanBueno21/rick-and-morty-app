@@ -1,19 +1,34 @@
-// import React, { useContext } from 'react'
-import { Context } from '../../context/context'
-import Card from "../Card/card"
-import Navbar from '../Navbar/navbar'
+// import "./home.css"
+// import Card from "../Card/card"
+// import Navbar from '../Navbar/navbar'
 
-import "./home.css"
+// const Home = () => {
+//   return (
+//     <>
+//       <Navbar />
+//       <Card />
+//     </>
+//   )
+// }
+
+// export default Home;
+
+
+import React, { useContext } from 'react';
+import "./home.css";
+import Card from "../Card/card";
+import Navbar from '../Navbar/navbar';
+import { MyContext } from "../../context/context";
 
 const Home = () => {
+  const { filteredCharacters } = useContext(MyContext); // Obtener los personajes filtrados desde el contexto
 
   return (
-    <Context>
-      <Navbar />
-      
-      <Card />
-    </Context>
-  )
+    <>
+      <Navbar /> {/* Ya no necesitamos pasar funciones aquí */}
+      <Card characters={filteredCharacters} /> {/* Renderizamos los personajes filtrados */}
+    </>
+  );
 }
 
 export default Home;

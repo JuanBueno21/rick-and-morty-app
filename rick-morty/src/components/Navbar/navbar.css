@@ -23,12 +23,13 @@
   justify-content: center;
 }
 
-.menu {
-  display: flex;
+.input {
   color: white;
-  width: 270px;
-  align-items: center;
-  justify-content: center;
+  width: 250px;
+  height: 60px;
+  display: flex;
+  border-radius: 20px;
+  font-size: 25px;
 }
 
 .linear-gradient {
@@ -38,13 +39,17 @@
   height: 100px;
 }
 
+.button {
+  width: 200px;
+  height: 50px;
+  font-size: 25px;
+  border-radius: 30px;
+  border: 2px solid grey;
+  background-color: rgba(91, 91, 91, 0.433);
+  color: rgb(193, 193, 193);
+}
 
-
-@media (max-width: 800px) and (min-width: 768px) {
-
-  .image-page {
-    max-width: 50px;
-    max-height: 50px;
-    height: auto;
-  }
+.button:hover {
+  background: rgb(113, 113, 113);
+  color: white;
 }
