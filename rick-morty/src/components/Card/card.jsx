@@ -4,7 +4,6 @@ import React from 'react';
 const Card = ({ characters }) => {
 
   return (
-
     <div className='card-container'>
       {characters.map(character => (
 
@@ -20,9 +19,7 @@ const Card = ({ characters }) => {
         </div>
 
       ))}
-
     </div>
-
   );
 }
 export default Card;

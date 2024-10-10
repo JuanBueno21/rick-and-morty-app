@@ -1,3 +1,21 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 50;
+}
+
 .pages {
-  color: white;
+  color: rgb(146, 146, 146);
+  font-size: 24px;
+}
+
+.buttons {
+  width: 70px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 10px;
+  margin: 20px;
+  background: grey;
 }

@@ -9,7 +9,7 @@ const Home = () => {
   const { filteredCharacters } = useContext(MyContext); // obtengo los personajes filtrados desde el contexto
 
   return (
-    <>
+    < >
       <Navbar /> 
       <Card characters={filteredCharacters} />
       <Pagination />
