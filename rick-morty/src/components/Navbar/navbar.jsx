@@ -4,7 +4,7 @@ import logo from '../../assets/homePage/logo.jpg';
 import rickandmorty from "../../assets/homePage/rickandmorty.jpg";
 import Search from '../../components/SearchComponent/search';
 
-const Navbar = ({ onSearch }) => { // Asegúrate de recibir onSearch como prop
+const Navbar = ({ onSearch }) => { // Se recibe onSearch como prop
   return (
     <div className='head-container'>
       <div className='navbar-container'>

@@ -1,32 +1,3 @@
-// import { useState, createContext, useEffect } from "react";
-
-// export const MyContext = createContext();
-// export const Context = ({ children }) => {
-//   const [character, setCharacter] = useState([]);
-
-//   useEffect(() => {
-//     fetch("https://rickandmortyapi.com/api/character")
-//       .then(response => response.json())
-//       .then((data) => {
-//         setCharacter(data.results)
-//         // console.log(data.results);
-//       }
-//       )
-//   }, []);
-
-//   return (
-//     <MyContext.Provider value={{ character, setCharacter }}>
-//       {children}
-//     </MyContext.Provider>
-//   );
-// }
-
-// export default Context;
-
-
-
-
-
 import { useState, createContext, useEffect } from "react";
 
 export const MyContext = createContext();
@@ -34,15 +5,20 @@ export const MyContext = createContext();
 export const Context = ({ children }) => {
   const [character, setCharacter] = useState([]);
   const [filteredCharacters, setFilteredCharacters] = useState([]); // Estado para personajes filtrados
+  const [info, setInfo] = useState({});
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
-    fetch("https://rickandmortyapi.com/api/character")
+    fetch(`https://rickandmortyapi.com/api/character?page=${currentPage}`)
       .then(response => response.json())
       .then((data) => {
         setCharacter(data.results);
-        setFilteredCharacters(data.results); // Inicializa los personajes filtrados con todos
+        // Inicializa los personajes filtrados con todos        
+        setFilteredCharacters(data.results);
+        // Obtiene la información de info
+        setInfo(data.info);
       });
-  }, []);
+  }, [currentPage]);
 
   const filterCharacters = (searchText) => {
     if (searchText === "") {
@@ -58,8 +34,12 @@ export const Context = ({ children }) => {
   return (
     <MyContext.Provider value={{
       character,
-      filteredCharacters, 
-      filterCharacters, 
+      filteredCharacters,
+      filterCharacters,
+      info,
+      currentPage,
+      setCurrentPage,
+      // Implementación de la paginación aquí...
     }}>
       {children}
     </MyContext.Provider>
