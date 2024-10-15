@@ -39,7 +39,6 @@ export const Context = ({ children }) => {
       info,
       currentPage,
       setCurrentPage,
-      // Implementación de la paginación aquí...
     }}>
       {children}
     </MyContext.Provider>

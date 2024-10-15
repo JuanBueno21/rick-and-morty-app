@@ -1,4 +1,3 @@
-import "./home.css";
 import Card from "../Card/card";
 import Navbar from '../Navbar/navbar';
 import React, { useContext } from 'react';
@@ -10,7 +9,7 @@ const Home = () => {
 
   return (
     < >
-      <Navbar /> 
+      <Navbar />
       <Card characters={filteredCharacters} />
       <Pagination />
     </>

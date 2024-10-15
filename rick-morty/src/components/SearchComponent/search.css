@@ -1,7 +1,6 @@
 .search-container input {
   color: rgb(255, 255, 255);
   width: 200px;
-  height: 30px;
   font-size: 18px;
   border-radius: 15px;
   background-color: rgba(167, 167, 167, 0.267);
@@ -9,4 +8,8 @@
   line-height: 30px;
   margin-top: 100px;
   margin-right: 20px;
+}
+
+.search-container {
+  height: 100%;
 }

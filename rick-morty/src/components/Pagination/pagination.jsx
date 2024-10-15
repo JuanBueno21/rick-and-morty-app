@@ -3,11 +3,11 @@ import React, { useContext } from 'react'
 import { MyContext } from '../../context/context'
 
 const Pagination = () => {
-  const { info, setCurrentPage, currentPage } = useContext(MyContext)
+  const { info, setCurrentPage, currentPage } = useContext(MyContext);
 
   return (
 
-    <div>
+    <div className="pagination-container">
       <button className="buttons"
         onClick={() => setCurrentPage(prev => (prev > 1 ? prev - 1 : 1))}> Prev
       </button>
