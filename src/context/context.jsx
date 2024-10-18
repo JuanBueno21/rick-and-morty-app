@@ -17,7 +17,10 @@ export const Context = ({ children }) => {
         setFilteredCharacters(data.results);
         // Obtiene la información de info
         setInfo(data.info);
-      });
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      })
   }, [currentPage]);
 
   const filterCharacters = (searchText) => {
