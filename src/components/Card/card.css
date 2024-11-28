@@ -48,11 +48,8 @@
 
 .link-episodes ul {
   list-style: none;
-  /* Elimina los puntos de la lista */
   padding: 0;
-  /* Elimina el padding */
   margin: 0;
-  /* Elimina el margen */
 }
 
 .link-episodes a {
@@ -60,8 +57,6 @@
   font-size: 25px;
 }
 
-/* Si quieres aplicar estilos específicos al hover */
 .link-episodes a:hover {
   color: #000;
-  /* Cambia el color al pasar el mouse (puedes personalizarlo) */
 }
