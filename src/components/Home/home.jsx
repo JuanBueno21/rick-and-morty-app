@@ -3,6 +3,7 @@ import Navbar from '../Navbar/navbar';
 import React, { useContext } from 'react';
 import { MyContext } from "../../context/context";
 import Pagination from '../Pagination/pagination';
+import "./home.css";
 
 const Home = () => {
   const { filteredCharacters } = useContext(MyContext); // obtengo los personajes filtrados desde el contexto
